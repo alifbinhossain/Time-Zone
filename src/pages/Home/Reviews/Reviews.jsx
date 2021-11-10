@@ -14,11 +14,10 @@ const Reviews = () => {
 
   const settings = {
     dots: true,
-    infinite: true,
     speed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    initialSlide: 0,
+    initialSlide: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
@@ -28,7 +27,6 @@ const Reviews = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
           dots: true,
         },
       },
@@ -38,7 +36,6 @@ const Reviews = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
-          infinite: true,
           dots: true,
         },
       },
@@ -48,7 +45,6 @@ const Reviews = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
-          infinite: true,
           dots: true,
         },
       },

@@ -1,10 +1,13 @@
 import React from "react";
 import "./Header.css";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../images/logo/logo.png";
 import { Link, NavLink } from "react-router-dom";
+import useAll from "../../hooks/useAll";
 
 const Header = () => {
+  const { user, logOut } = useAll();
+
   const activeStyle = {
     color: "#cb9400",
     fontWeight: "700",
@@ -26,6 +29,23 @@ const Header = () => {
               <Nav.Link as={NavLink} activeStyle={activeStyle} to="/explore">
                 Explore
               </Nav.Link>
+
+              {user ? (
+                <>
+                  <Nav.Link> {user?.displayName} </Nav.Link>
+                  <Button onClick={logOut} variant="dark">
+                    Sign Out
+                  </Button>
+                </>
+              ) : (
+                <Nav.Link
+                  as={NavLink}
+                  activeStyle={activeStyle}
+                  to="/form/signin"
+                >
+                  Sign In
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

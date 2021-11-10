@@ -7,6 +7,10 @@ import Home from "./pages/Home/Home/Home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Explore from "./pages/Explore/Explore";
+import Form from "./pages/Form/Form";
+import Signin from "./pages/Form/SignIn/SignIn";
+import SignUp from "./pages/Form/SignUp/SignUp";
+import AllProvider from "./context/AllProvider";
 
 function App() {
   useEffect(() => {
@@ -19,21 +23,37 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route exact path="/home">
-            <Home></Home>
-          </Route>
-          <Route exact path="/explore">
-            <Explore></Explore>
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+    <AllProvider>
+      <div className="App">
+        <Router>
+          <Switch>
+            {/* -------------------------------------------------------------------------- */
+            /*                                 OPEN ROUTES                                */
+            /* -------------------------------------------------------------------------- */}
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route exact path="/home">
+              <Home></Home>
+            </Route>
+            <Route exact path="/explore">
+              <Explore></Explore>
+            </Route>
+
+            <Route exact path="/form/signin">
+              <Form>
+                <Signin></Signin>
+              </Form>
+            </Route>
+            <Route exact path="/form/signup">
+              <Form>
+                <SignUp></SignUp>
+              </Form>
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    </AllProvider>
   );
 }
 

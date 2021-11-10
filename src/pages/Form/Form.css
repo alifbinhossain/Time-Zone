@@ -1,0 +1,123 @@
+.form {
+  min-height: 100vh;
+}
+
+.form-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../../images/others/form-banner-3.jpg);
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.form-signin {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 3rem 4rem;
+  border-radius: 8px;
+  color: #fff;
+  min-width: 30%;
+  max-width: 35%;
+}
+
+.form-input {
+  background-color: #232a31 !important;
+  color: #adb5bd !important;
+  border: none !important;
+  padding: 4% 5% !important;
+}
+.form-input::placeholder {
+  color: #e1e1e1e1 !important;
+}
+.form-input:focus {
+  color: #dee3e4 !important;
+}
+.form-label {
+  color: #dee3e4 !important;
+}
+
+.text-more-option {
+  color: #dee3e4;
+  position: relative;
+}
+.text-more-option::before,
+.text-more-option::after {
+  content: "";
+  border: 1px solid #dee3e4;
+  position: absolute;
+  top: 50%;
+  width: 23%;
+  opacity: 0.2;
+}
+.text-more-option::before {
+  left: 0;
+}
+.text-more-option::after {
+  right: 0;
+}
+
+.btn-custom {
+  border: none;
+  padding: 3% 6%;
+  border-radius: 5px;
+  color: #000;
+  font-weight: 500;
+  background-color: #fff;
+}
+.btn-custom:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(255, 255, 255, 0.1);
+}
+
+.btn-social {
+  border: none;
+  margin: 5px;
+  font-size: 25px;
+  background-color: transparent;
+  color: #fff;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-social i {
+  backface-visibility: hidden;
+  transition: all 0.2s ease;
+}
+.btn-social:hover i {
+  transform: scale(1.5) skew(-7deg) translate(5px, -5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.required-text {
+  font-size: 14px;
+  display: block;
+  margin-top: 8px;
+  margin-bottom: -8px;
+  font-weight: 600;
+  color: orange;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .form {
+    min-height: 80vh;
+    padding: 1rem;
+  }
+
+  .form-signin {
+    padding: 2rem 1rem;
+    min-width: 100%;
+  }
+}
