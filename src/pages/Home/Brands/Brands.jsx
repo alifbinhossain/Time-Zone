@@ -30,7 +30,11 @@ const Brands = () => {
   return (
     <section className="brands">
       <h1 className="text-center">Shop By Brands</h1>
-      <Row xs={1} sm={2} md={4} lg={5} className="g-3">
+      <p className="text-center">
+        LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING
+        INDUSTRY
+      </p>
+      <Row xs={1} sm={2} md={4} lg={5} className="g-3 mt-3">
         {brands.map((brand) => (
           <Col key={brand.id}>
             <Brand brand={brand}></Brand>

@@ -1,0 +1,75 @@
+.review {
+  width: 400px;
+  display: inline-block !important;
+  margin: 0 2rem 1rem 0;
+  padding: 3rem 2rem !important;
+  border: 6px solid #e7e7e7e7 !important;
+  border-radius: none !important;
+  color: #000;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.review:hover {
+  background-color: #000;
+  color: #fff;
+  border: 6px solid #000 !important;
+}
+
+.review .icon {
+  color: #cb9400;
+}
+
+.review img {
+  width: 2rem;
+  display: block;
+  margin: 0 auto 1rem;
+}
+.review .card-body {
+  font-size: 22px;
+}
+
+.review .description {
+  font-family: "Philosopher", sans-serif;
+  width: 100%;
+  overflow-y: scroll;
+  min-height: 150px;
+  max-height: 150px;
+}
+
+.review .description::-webkit-scrollbar {
+  width: 10px;
+}
+
+.review .description::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.review .description::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.review .name {
+  color: #cb9400;
+  font-weight: 700;
+}
+.review .address {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+@media (max-width: 668px) {
+  .review {
+    width: 95vw;
+    display: block;
+    margin: 0 1rem 1rem 0;
+  }
+
+  .review .description {
+    font-family: "Philosopher", sans-serif;
+    width: 100%;
+    overflow-y: scroll;
+
+    min-height: 150px;
+    max-height: 150px;
+  }
+}

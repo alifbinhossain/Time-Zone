@@ -4,6 +4,9 @@ import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Home from "./pages/Home/Home/Home";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Explore from "./pages/Explore/Explore";
 
 function App() {
   useEffect(() => {
@@ -24,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home></Home>
+          </Route>
+          <Route exact path="/explore">
+            <Explore></Explore>
           </Route>
         </Switch>
       </Router>

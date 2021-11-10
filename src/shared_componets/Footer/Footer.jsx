@@ -30,22 +30,22 @@ const Footer = () => {
 
       <ul className="footer-social-list">
         <a href="/" className="footer-social-link">
-          <i class="fab fa-facebook-f"></i>
+          <i className="fab fa-facebook-f"></i>
         </a>
         <a href="/" className="footer-social-link">
-          <i class="fab fa-twitter"></i>
+          <i className="fab fa-twitter"></i>
         </a>
         <a href="/" className="footer-social-link">
-          <i class="fab fa-youtube"></i>
+          <i className="fab fa-youtube"></i>
         </a>
         <a href="/" className="footer-social-link">
-          <i class="fab fa-google-plus-g"></i>
+          <i className="fab fa-google-plus-g"></i>
         </a>
         <a href="/" className="footer-social-link">
-          <i class="fab fa-instagram"></i>
+          <i className="fab fa-instagram"></i>
         </a>
         <a href="/" className="footer-social-link">
-          <i class="fab fa-linkedin-in"></i>
+          <i className="fab fa-linkedin-in"></i>
         </a>
       </ul>
 

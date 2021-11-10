@@ -1,9 +1,9 @@
 import React from "react";
 import "./Features.css";
-import img1 from "../../../images/logo/icon-1.png";
-import img2 from "../../../images/logo/icon-2.png";
-import img3 from "../../../images/logo/icon-3.png";
-import img4 from "../../../images/logo/icon-4.png";
+import img1 from "../../images/logo/icon-1.png";
+import img2 from "../../images/logo/icon-2.png";
+import img3 from "../../images/logo/icon-3.png";
+import img4 from "../../images/logo/icon-4.png";
 
 const Features = () => {
   return (

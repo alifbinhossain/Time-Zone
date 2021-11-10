@@ -1,10 +1,26 @@
 .our-collections,
 .brands {
-  margin: 2rem 6rem;
+  margin: 2rem 6rem 2rem;
+}
+
+.brands {
+  padding: 0 0 2rem 0;
+}
+.reviews {
+  margin: 2rem 0;
 }
 
 .brands h1,
-.our-collections h1 {
-  font-weight: 700;
+.our-collections h1,
+.reviews {
   color: #000;
+}
+
+.our-collections p,
+.brands p,
+.reviews p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.reviews .slider {
 }
