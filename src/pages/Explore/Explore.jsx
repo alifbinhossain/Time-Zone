@@ -5,14 +5,20 @@ import Features from "../../shared_componets/Features/Features";
 import Footer from "../../shared_componets/Footer/Footer";
 import Header from "../../shared_componets/Header/Header";
 import Watch from "../../shared_componets/Watch/Watch";
+import { FadeLoader } from "react-spinners";
 
 const Explore = () => {
   const [watches, setWatches] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/watches")
-      .then((data) => setWatches(data.data));
+    setLoading(true);
+    setTimeout(() => {
+      axios.get("http://localhost:5000/watches").then((data) => {
+        setWatches(data.data);
+        setLoading(false);
+      });
+    }, 1500);
   }, []);
 
   return (
@@ -25,13 +31,19 @@ const Explore = () => {
           LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING
           INDUSTRY
         </p>
-        <Row xs={1} sm={2} md={3} className="g-4">
-          {watches.map((watch) => (
-            <Col key={watch._id}>
-              <Watch watch={watch}></Watch>
-            </Col>
-          ))}
-        </Row>
+        {loading ? (
+          <div className="spinner-box">
+            <FadeLoader color="#777777" />
+          </div>
+        ) : (
+          <Row xs={1} sm={2} md={3} className="g-4">
+            {watches.map((watch) => (
+              <Col key={watch._id}>
+                <Watch watch={watch}></Watch>
+              </Col>
+            ))}
+          </Row>
+        )}
       </section>
       <Features></Features>
       <Footer></Footer>

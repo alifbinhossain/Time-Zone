@@ -1,0 +1,152 @@
+.booking-banner {
+  min-height: 15vh;
+  background-color: #cb9400;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.booking-banner h3 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.booking-banner a {
+  color: #fff;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               BOOKING CONTENT                              */
+/* -------------------------------------------------------------------------- */
+.booking-content {
+  margin: 3rem 6rem;
+}
+.booking-product {
+  display: flex;
+}
+
+.product-image-box {
+  flex: 0 0 40%;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image-box img {
+  width: 100%;
+}
+.product-image-box .image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.product-image-box .image-hover:hover {
+  opacity: 1;
+}
+
+.product-details {
+  padding: 0 0 0 3rem;
+  flex: 1;
+}
+.product-details .total-reviews,
+.product-details .icon,
+.product-name,
+.product-price {
+  color: #cb9400;
+}
+
+.product-details .total-reviews {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.product-name {
+  font-size: 42px;
+  font-weight: 700;
+}
+.product-price {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.product-details .description {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+}
+/* -------------------------------------------------------------------------- */
+/*                               BOOKING BOTTTOM                              */
+/* -------------------------------------------------------------------------- */
+.booking-bottom {
+  background-image: linear-gradient(
+      to right,
+      rgba(203, 148, 0, 0.85),
+      rgba(203, 148, 0, 0.85)
+    ),
+    url(../../images/others/booking-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 6rem 1rem;
+}
+
+.discount {
+  font-size: 90px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* ------------------------------ BOOKING FORM ------------------------------ */
+.booking-form {
+  flex: 0 0 60%;
+  padding: 0 8%;
+}
+
+.booking-form h3 {
+  font-weight: 300;
+  font-size: 62px;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.booking-form form {
+  display: block;
+  margin: 0 auto;
+}
+.booking-form input {
+  display: block;
+  border: 1px solid #e7e7e7e7;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  font-size: 18px;
+  width: 100%;
+}
+.booking-form input:focus {
+  outline: 1px solid #e7e7e7e7;
+}
+
+.booking-form small {
+  display: block;
+  margin-top: -6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+.btn-book {
+  background-color: #000;
+  color: #fff;
+  border: none !important;
+  border-radius: 4px !important;
+  width: max-content !important;
+  padding: 0.4rem 1.2rem !important;
+}

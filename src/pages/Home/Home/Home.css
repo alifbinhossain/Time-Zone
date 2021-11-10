@@ -16,6 +16,16 @@
   color: #000;
 }
 
+.our-collections {
+  min-height: 80vh;
+}
+.spinner-box {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .our-collections p,
 .brands p,
 .reviews p {

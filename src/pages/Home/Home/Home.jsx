@@ -10,14 +10,20 @@ import { Col, Row } from "react-bootstrap";
 import Watch from "../../../shared_componets/Watch/Watch";
 import axios from "axios";
 import Reviews from "../Reviews/Reviews";
+import { MoonLoader, FadeLoader } from "react-spinners";
 
 const Home = () => {
   const [watches, setWatches] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/watches?limit=6")
-      .then((data) => setWatches(data.data));
+    setLoading(true);
+    setTimeout(() => {
+      axios.get("http://localhost:5000/watches?limit=6").then((data) => {
+        setWatches(data.data);
+        setLoading(false);
+      });
+    }, 1500);
   }, []);
 
   return (
@@ -30,13 +36,20 @@ const Home = () => {
           LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING
           INDUSTRY
         </p>
-        <Row xs={1} sm={2} md={3} className="g-4">
-          {watches.map((watch) => (
-            <Col key={watch._id}>
-              <Watch watch={watch}></Watch>
-            </Col>
-          ))}
-        </Row>
+
+        {loading ? (
+          <div className="spinner-box">
+            <FadeLoader color="#777777" />
+          </div>
+        ) : (
+          <Row xs={1} sm={2} md={3} className="g-4">
+            {watches.map((watch) => (
+              <Col key={watch._id}>
+                <Watch watch={watch}></Watch>
+              </Col>
+            ))}
+          </Row>
+        )}
       </section>
       <img className="w-100 mt-5" src={img} alt="" />
       <Brands></Brands>

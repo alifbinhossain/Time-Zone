@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import "./Watch.css";
 import { Button, Card } from "react-bootstrap";
+import { useHistory } from "react-router";
 
 const Watch = ({ watch }) => {
-  const { img1, img2, discount, name, price } = watch;
+  const { img1, img2, discount, name, price, _id } = watch;
+  const history = useHistory();
+
+  const handleBooking = () => {
+    history.push(`/booking/${_id}`);
+  };
 
   return (
     <Card className="watch-card">
@@ -20,7 +26,9 @@ const Watch = ({ watch }) => {
           <span>€{(price - price * (discount / 100)).toFixed(2)}</span>
         </Card.Text>
         <Card.Text className="price"></Card.Text>
-        <Button variant="dark"> Buy Now</Button>
+        <Button onClick={handleBooking} variant="dark">
+          Buy Now
+        </Button>
       </Card.Body>
     </Card>
   );

@@ -2,14 +2,20 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Review from "../Review/Review";
+import { FadeLoader } from "react-spinners";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/reviews")
-      .then((data) => setReviews(data.data));
+    setLoading(true);
+    setTimeout(() => {
+      axios.get("http://localhost:5000/reviews").then((data) => {
+        setReviews(data.data);
+        setLoading(false);
+      });
+    }, 1500);
   }, []);
 
   const settings = {
@@ -54,13 +60,19 @@ const Reviews = () => {
   return (
     <section className="reviews">
       <p className="text-center m-0"> Testimonial</p>
-      <h1 className="text-center mb-4">Our Happy Clients</h1>
-      <Slider {...settings} className="slider">
-        {reviews.length &&
-          reviews.map((review) => (
+      <h1 className="text-center mb-4">Our Happy Customers</h1>
+
+      {loading ? (
+        <div className="spinner-box">
+          <FadeLoader color="#777777" />
+        </div>
+      ) : (
+        <Slider {...settings} className="slider">
+          {reviews.map((review) => (
             <Review key={review._id} review={review}></Review>
           ))}
-      </Slider>
+        </Slider>
+      )}
     </section>
   );
 };

@@ -11,6 +11,8 @@ import Form from "./pages/Form/Form";
 import Signin from "./pages/Form/SignIn/SignIn";
 import SignUp from "./pages/Form/SignUp/SignUp";
 import AllProvider from "./context/AllProvider";
+import Booking from "./pages/Booking/Booking";
+import PrivateRoute from "./shared_componets/PrivateRoute/PrivateRoute";
 
 function App() {
   useEffect(() => {
@@ -50,6 +52,13 @@ function App() {
                 <SignUp></SignUp>
               </Form>
             </Route>
+
+            {/* -------------------------------------------------------------------------- */
+            /*                               PRIVATE ROUTES                               */
+            /* -------------------------------------------------------------------------- */}
+            <PrivateRoute exact path="/booking/:id">
+              <Booking></Booking>
+            </PrivateRoute>
           </Switch>
         </Router>
       </div>
