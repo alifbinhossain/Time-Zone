@@ -1,0 +1,10 @@
+.our-collections,
+.brands {
+  margin: 2rem 6rem;
+}
+
+.brands h1,
+.our-collections h1 {
+  font-weight: 700;
+  color: #000;
+}
