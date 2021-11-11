@@ -6,17 +6,24 @@ import popupSuccess from "../../../popup/popupSuccess";
 import MyOrderList from "./MyOrderList/MyOrderList";
 import "./MyOrders.css";
 import img from "../../../images/others/Waiting-pana.svg";
+import { FadeLoader } from "react-spinners";
 
 const MyOrders = () => {
   const { user } = useAll();
-  console.log(user);
+  const [loading, setLoading] = useState(true);
   const [myOrders, setMyOrders] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/my_order/${user?.email}`)
-      .then((data) => setMyOrders(data.data));
-  }, []);
+    setLoading(true);
+    setTimeout(() => {
+      axios
+        .get(`http://localhost:5000/my_order/${user?.email}`)
+        .then((data) => {
+          setMyOrders(data.data);
+          setLoading(false);
+        });
+    }, 800);
+  }, []); //get current user orders
 
   const name = myOrders[0]?.name;
   const email = myOrders[0]?.email;
@@ -50,12 +57,21 @@ const MyOrders = () => {
   };
 
   return (
-    <section className="my-orders">
-      {myOrders.length ? (
+    <section className="my-orders" data-aos="fade-in">
+      {loading ? (
+        <div className="spinner-box">
+          <FadeLoader color="#777777" />
+        </div>
+      ) : myOrders.length ? (
         <>
           <div className="user-orders">
-            <h1 className="text-center mb-4"> My Orders</h1>
-            <div className="user-info d-lg-flex align-items-center justify-content-center">
+            <h1 className="text-center mb-4" data-aos="fade-up">
+              My Orders
+            </h1>
+            <div
+              className="user-info d-lg-flex align-items-center justify-content-center"
+              data-aos="fade-in"
+            >
               <h4>Name : {name}</h4>
               <h4>Email : {email}</h4>
               <h4>Address : {address}</h4>
@@ -76,8 +92,8 @@ const MyOrders = () => {
         </>
       ) : (
         <div className="no-order">
-          <h1> No Orders added yet!</h1>
-          <img src={img} alt="" />
+          <h1 data-aos="fade-up"> No Orders added yet!</h1>
+          <img data-aos="fade-left" src={img} alt="" />
         </div>
       )}
     </section>

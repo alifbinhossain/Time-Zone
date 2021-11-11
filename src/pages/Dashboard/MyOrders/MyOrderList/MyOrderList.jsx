@@ -6,7 +6,7 @@ const MyOrderList = ({ order, handleOrderDelete }) => {
   const { name, img1, price, discount } = watch;
 
   return (
-    <li className="my_orders-list">
+    <li className="my_orders-list" data-aos="fade-right" data-aos-offset="20">
       <div className="image-box">
         <img src={img1} alt="" />
         {status === "pending" && <p className="pending"></p>}
