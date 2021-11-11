@@ -10,6 +10,7 @@ import popupError from "../../../popup/popupError";
 
 const Signin = () => {
   const {
+    saveUser,
     signInWithEmail,
     signInWithSocial,
     facebookProvider,
@@ -50,6 +51,8 @@ const Signin = () => {
   const handleSignInWithSocial = (provider) => {
     signInWithSocial(provider)
       .then((res) => {
+        const user = res.user;
+        saveUser(user?.email, user?.displayName, "PUT");
         popupSuccess("login");
         history.push(redirectUrl);
       })

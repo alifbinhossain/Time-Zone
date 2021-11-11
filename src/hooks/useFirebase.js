@@ -16,12 +16,14 @@ import {
 } from "firebase/auth";
 import popupSuccess from "../popup/popupSuccess";
 import popupError from "../popup/popupError";
+import axios from "axios";
 
 initializeAuthentication();
 
 const useFirebase = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [admin, setAdmin] = useState(false);
 
   const auth = getAuth();
 
@@ -54,6 +56,8 @@ const useFirebase = () => {
       .then((result) => {
         updateUserInfo(name);
         setUser(result.user);
+        // save user to the database
+        saveUser(email, name, "POST");
         window.location.pathname = "/form/signin";
         logOut(false);
         popupSuccess("new");
@@ -113,8 +117,33 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, [auth]);
 
+  /* -------------------------------------------------------------------------- */
+  /*                             ADD NEW USER TO DB                             */
+  /* -------------------------------------------------------------------------- */
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch("http://localhost:5000/users", {
+      method: method,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
+  };
+
+  /* -------------------------------------------------------------------------- */
+  /*                               ADMIN PRESENCE                               */
+  /* -------------------------------------------------------------------------- */
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5000/users/${user?.email}`)
+      .then((data) => setAdmin(data.data.admin));
+  }, [user?.email]);
+
   return {
     user,
+    admin,
+    saveUser,
     setUser,
     loading,
     setLoading,

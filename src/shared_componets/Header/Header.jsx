@@ -4,13 +4,31 @@ import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../images/logo/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import useAll from "../../hooks/useAll";
+import Swal from "sweetalert2";
 
 const Header = () => {
   const { user, logOut } = useAll();
-
   const activeStyle = {
     color: "#cb9400",
     fontWeight: "700",
+  };
+
+  /* -------------------------------------------------------------------------- */
+  /*                        SIGN OUT BUTTON FUNCTIONALITY                       */
+  /* -------------------------------------------------------------------------- */
+  const handleLogOut = () => {
+    Swal.fire({
+      title: "Are you sure you want to log out?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        logOut(true);
+      }
+    }); //log out confirmation checking popup
   };
 
   return (
@@ -32,9 +50,20 @@ const Header = () => {
 
               {user ? (
                 <>
-                  <Nav.Link> {user?.displayName} </Nav.Link>
-                  <Button onClick={logOut} variant="dark">
-                    Sign Out
+                  <Nav.Link>
+                    <i class="fas fa-user me-2"></i>
+                    {user?.displayName.split(" ")[0]}
+                  </Nav.Link>
+                  <Nav.Link
+                    as={NavLink}
+                    activeStyle={activeStyle}
+                    to="/dashboard"
+                  >
+                    {" "}
+                    Dashboard{" "}
+                  </Nav.Link>
+                  <Button onClick={handleLogOut} variant="transparent">
+                    <i className="fas fa-sign-out-alt"></i> Sign Out
                   </Button>
                 </>
               ) : (
@@ -43,7 +72,7 @@ const Header = () => {
                   activeStyle={activeStyle}
                   to="/form/signin"
                 >
-                  Sign In
+                  Sign In <i className="fas fa-sign-in-alt"></i>
                 </Nav.Link>
               )}
             </Nav>

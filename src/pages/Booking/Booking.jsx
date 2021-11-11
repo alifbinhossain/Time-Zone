@@ -80,7 +80,7 @@ const Booking = () => {
               <p className="me-4 total-reviews">
                 <i class="fas fa-users"></i> Total Reviews : {watch?.reviews}
               </p>
-              <p>
+              <p className="ratings">
                 <Rating
                   className="icon"
                   initialRating={watch?.rating}

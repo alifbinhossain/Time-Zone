@@ -13,6 +13,9 @@ import SignUp from "./pages/Form/SignUp/SignUp";
 import AllProvider from "./context/AllProvider";
 import Booking from "./pages/Booking/Booking";
 import PrivateRoute from "./shared_componets/PrivateRoute/PrivateRoute";
+import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
+import Payment from "./pages/Dashboard/Payment/Payment";
+import SideNav from "./pages/Dashboard/SideNav/SideNav";
 
 function App() {
   useEffect(() => {
@@ -58,6 +61,9 @@ function App() {
             /* -------------------------------------------------------------------------- */}
             <PrivateRoute exact path="/booking/:id">
               <Booking></Booking>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
             </PrivateRoute>
           </Switch>
         </Router>
