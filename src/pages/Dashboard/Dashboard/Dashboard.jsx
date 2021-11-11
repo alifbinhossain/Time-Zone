@@ -1,26 +1,28 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useRouteMatch,
-} from "react-router-dom";
+import "./Dashboard.css";
+import { Switch, useRouteMatch } from "react-router-dom";
 import AdminRoute from "../../../shared_componets/AdminRoute/AdminRoute";
 import PrivateRoute from "../../../shared_componets/PrivateRoute/PrivateRoute";
+import AddNewProduct from "../AddNewProduct/AddNewProduct";
 import DashboardHome from "../DashboardHome/DashboardHome";
 import DashReview from "../DashReview/DashReview";
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+import ManageProducts from "../ManageProducts/ManageProducts";
 import MyOrders from "../MyOrders/MyOrders";
 import Payment from "../Payment/Payment";
 import SideNav from "../SideNav/SideNav";
 
 const Dashboard = () => {
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
   return (
     <div>
       <SideNav></SideNav>
       <section className="dashboard-content">
         <Switch>
+          {/* -------------------------------------------------------------------------- */
+          /*                         LOGGED IN CUSTOMER'S ROUTE                         */
+          /* -------------------------------------------------------------------------- */}
           <PrivateRoute exact path={`${path}`}>
             <DashboardHome></DashboardHome>
           </PrivateRoute>
@@ -41,8 +43,23 @@ const Dashboard = () => {
             <DashReview></DashReview>
           </PrivateRoute>
 
+          {/* -------------------------------------------------------------------------- */
+          /*                                ADMIN ROUTES                                */
+          /* -------------------------------------------------------------------------- */}
           <AdminRoute exact path={`${path}/manage_all_orders`}>
             <ManageAllOrders></ManageAllOrders>
+          </AdminRoute>
+
+          <AdminRoute exact path={`${path}/add_products`}>
+            <AddNewProduct></AddNewProduct>
+          </AdminRoute>
+
+          <AdminRoute exact path={`${path}/manage_products`}>
+            <ManageProducts></ManageProducts>
+          </AdminRoute>
+
+          <AdminRoute exact path={`${path}/make_admin`}>
+            <MakeAdmin></MakeAdmin>
           </AdminRoute>
         </Switch>
       </section>

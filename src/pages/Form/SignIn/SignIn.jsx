@@ -34,12 +34,7 @@ const Signin = () => {
     const userPassword = data.password;
     signInWithEmail(userEmail, userPassword)
       .then((result) => {
-        const isAdmin = "admin@gmail.com";
-        if (result._tokenResponse.email === isAdmin) {
-          popupSuccess("admin");
-        } else {
-          popupSuccess("login");
-        }
+        popupSuccess("login");
         reset();
         history.push(redirectUrl);
       })

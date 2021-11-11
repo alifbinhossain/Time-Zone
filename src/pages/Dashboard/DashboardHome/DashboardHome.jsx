@@ -3,9 +3,9 @@ import "./DashboardHome.css";
 
 const DashboardHome = () => {
   return (
-    <div>
+    <section className="dash-home">
       <h1>This is dashboard home</h1>
-    </div>
+    </section>
   );
 };
 

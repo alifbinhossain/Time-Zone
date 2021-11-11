@@ -2,9 +2,9 @@ import React from "react";
 
 const DashReview = () => {
   return (
-    <div>
+    <section className="dash-review">
       <h1>This is review</h1>
-    </div>
+    </section>
   );
 };
 

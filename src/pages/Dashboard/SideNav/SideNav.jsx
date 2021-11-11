@@ -10,13 +10,14 @@ import {
   SidebarDataCustomer,
 } from "../SidebarData/SidebarData";
 import useAll from "../../../hooks/useAll";
+import Swal from "sweetalert2";
 
 const SideNav = () => {
   const { logOut, user, admin } = useAll();
   const [sidebar, setSidebar] = useState(false);
-  let { url } = useRouteMatch();
   const showSidebar = () => setSidebar(!sidebar);
   const [sidebarData, setSideBarData] = useState(SidebarDataCustomer);
+  let { url } = useRouteMatch();
 
   useEffect(() => {
     if (admin) {
@@ -25,7 +26,25 @@ const SideNav = () => {
   }, [admin]);
 
   const activeStyle = {
-    backgroundColor: "#1a83ff",
+    backgroundColor: "#060b26",
+  };
+
+  /* -------------------------------------------------------------------------- */
+  /*                        SIGN OUT BUTTON FUNCTIONALITY                       */
+  /* -------------------------------------------------------------------------- */
+  const handleLogOut = () => {
+    Swal.fire({
+      title: "Are you sure you want to log out?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        logOut(true);
+      }
+    }); //log out confirmation checking popup
   };
 
   return (
@@ -36,7 +55,7 @@ const SideNav = () => {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
 
-          <h2>Welcome to dashboard {user?.displayName.split(" ")[0]} !</h2>
+          <h2>Welcome to the dashboard {user?.displayName.split(" ")[0]} !</h2>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
@@ -58,14 +77,14 @@ const SideNav = () => {
             })}
 
             <li>
-              <button onClick={logOut} className="btn-logout">
+              <button onClick={handleLogOut} className="btn-logout">
                 <FiIcons.FiLogOut /> Log Out
               </button>
             </li>
 
             <li className="nav-home">
               <Link className="" to="/home">
-                Back to main page
+                Back to the main page
               </Link>
             </li>
           </ul>
