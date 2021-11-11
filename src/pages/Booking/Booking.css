@@ -1,6 +1,6 @@
 .booking-banner {
   min-height: 15vh;
-  background-color: #cb9400;
+  background-color: #3c4a49;
   color: #fff;
   display: flex;
   align-items: center;
@@ -54,7 +54,7 @@
 .product-details .icon,
 .product-name,
 .product-price {
-  color: #cb9400;
+  color: #3c4a49;
 }
 
 .product-details .total-reviews {
@@ -86,8 +86,8 @@
 .booking-bottom {
   background-image: linear-gradient(
       to right,
-      rgba(203, 148, 0, 0.85),
-      rgba(203, 148, 0, 0.85)
+      rgba(60, 74, 73, 0.85),
+      rgba(60, 74, 73, 0.85)
     ),
     url(../../images/others/booking-banner.jpg);
   background-size: cover;
@@ -133,6 +133,7 @@
   border-radius: 2px;
   font-size: 18px;
   width: 100%;
+  color: #3c4a49;
 }
 .booking-form input:focus {
   outline: 1px solid #e7e7e7e7;
@@ -147,8 +148,8 @@
   color: #000;
 }
 .btn-book {
-  background-color: #000;
-  color: #fff;
+  background-color: #cb9400;
+  color: #fff !important;
   border: none !important;
   border-radius: 4px !important;
   width: max-content !important;

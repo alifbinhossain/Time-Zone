@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: #cb9400;
+  background-color: #3c4a49;
   height: 80px;
   display: flex;
   justify-content: start;
@@ -7,6 +7,7 @@
   padding-right: 3rem;
   position: relative;
 }
+
 .sidebar h2 {
   display: block;
   color: #fff;
@@ -20,12 +21,20 @@
   font-size: 2rem;
   background: none;
 }
+.menu-bars,
+.nav-menu {
+  color: #fff;
+}
+.menu-bars:hover,
+.nav-menu:hover {
+  color: #fff;
+}
 
 .nav-menu {
   background-image: linear-gradient(
     to bottom,
-    rgba(203, 148, 0, 1) 10%,
-    rgba(203, 148, 0, 0.75)
+    rgba(60, 74, 73, 1) 10%,
+    rgba(60, 74, 73, 0.75)
   );
   min-width: 250px;
   height: 100vh;
@@ -37,6 +46,11 @@
   left: -100%;
   transition: 850ms;
   padding-right: 1rem;
+}
+
+.nav-menu ul,
+.nav-menu li {
+  list-style: none;
 }
 
 .nav-menu.active {
@@ -63,13 +77,14 @@
   align-items: center;
   padding: 0 16px;
   border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
 .nav-text a:hover {
-  background-color: #060b26;
+  background-color: #fff;
+  color: #3c4a49;
 }
-
-.nav-menu-items {
+.nav-text a:hover .nav-menu-items {
   width: 100%;
 
   list-style: none;
@@ -107,8 +122,9 @@
 .nav-home {
   position: absolute;
   bottom: 3%;
-  left: 38%;
+  left: 50%;
   transform: translateX(-50%);
+  width: max-content;
 }
 .nav-home a {
   color: #fff;

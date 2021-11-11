@@ -28,7 +28,7 @@ footer hr {
   text-decoration: none;
   font-size: 20px;
   font-weight: 700;
-  color: #000;
+  color: #3c4a49;
   transition: all 0.2s ease;
 }
 .footer-item a:hover {
@@ -37,7 +37,7 @@ footer hr {
 
 .footer-social-link {
   text-decoration: none;
-  color: #000;
+  color: #3c4a49;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -51,7 +51,7 @@ footer hr {
   transition: all 0.2s;
 }
 .footer-social-link:hover {
-  background-color: #000;
+  background-color: #3c4a49;
   color: #fff;
 }
 

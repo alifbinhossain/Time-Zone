@@ -6,7 +6,9 @@
 }
 
 .watch-card img {
-  width: 100%;
+  max-width: 450px;
+  max-height: 450px;
+  object-fit: cover;
 }
 .watch-card .image-hover {
   position: absolute;
@@ -25,7 +27,8 @@
   top: 5%;
   left: 5%;
   color: #fff;
-  background-color: #cb9400;
+  /* background-color: #cb9400; */
+  background-color: #3c4a49;
   padding: 0.6rem 1.2rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -34,10 +37,16 @@
 .watch-card .card-body {
   position: absolute;
   bottom: 0;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right bottom,
     rgba(203, 148, 0, 0.95),
     rgba(203, 148, 0, 0.65)
+  ); */
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(60, 74, 73, 0.85),
+    rgba(60, 74, 73, 0.5)
   );
   color: #fff;
   width: 100%;

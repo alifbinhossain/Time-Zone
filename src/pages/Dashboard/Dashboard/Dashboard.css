@@ -10,7 +10,9 @@
 .payment,
 .dash-home,
 .dash-review,
-.all-orders {
+.all-orders,
+.add-products,
+.manage-products {
   width: 100%;
   padding: 2rem 4rem;
   background-color: rgba(255, 255, 255, 0.65);
@@ -19,10 +21,14 @@
   border-radius: 6px;
   min-height: 100%;
   padding: 3rem 6rem 2rem;
+  color: #3c4a49;
+  min-height: 90vh;
 }
 .my-orders h1,
 .payment h1,
-.all-orders h1 {
+.all-orders h1,
+.add-products h1,
+.manage-products h1 {
   font-weight: 700;
   font-size: 60px;
   letter-spacing: 2px;

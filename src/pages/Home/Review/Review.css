@@ -10,9 +10,9 @@
   transition: all 0.3s ease;
 }
 .review:hover {
-  background-color: #000;
+  background-color: #3c4a49;
   color: #fff;
-  border: 6px solid #000 !important;
+  border: 6px solid #3c4a49 !important;
 }
 
 .review .icon {

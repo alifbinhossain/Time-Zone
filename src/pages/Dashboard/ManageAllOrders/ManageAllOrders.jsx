@@ -22,7 +22,7 @@ const ManageAllOrders = () => {
       title: "Do you want to delete this order?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#3c4a49",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
     }).then((result) => {

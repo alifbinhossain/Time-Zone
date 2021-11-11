@@ -6,6 +6,8 @@ const popupSuccess = (successType, falseLogout) => {
     title = "Great! Your account has been successfully created.. ";
   } else if (successType === "removed") {
     title = "Successfully removed this order";
+  } else if (successType === "delete") {
+    title = "Successfully deleted this product";
   } else if (successType === "login") {
     title = "Congrats! Successfully logged in";
   } else if (successType === "admin") {
@@ -18,8 +20,8 @@ const popupSuccess = (successType, falseLogout) => {
     title = "Congrats! We've just received your order...👍";
   } else if (successType === "status") {
     title = "Successfully change this order status";
-  } else if (successType === "new tour") {
-    title = "Successfully added a new tour.. 😄";
+  } else if (successType === "new watch") {
+    title = "Successfully added a new watch.. 😄";
   }
   return Swal.fire({
     icon: "success",

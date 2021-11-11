@@ -27,7 +27,7 @@ const AllOrderItem = ({ order, index, handleOrderDelete }) => {
       title: "Do you want to change this order status?",
       icon: "question",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#3c4a49",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
     }).then((result) => {

@@ -27,8 +27,8 @@ const Booking = () => {
 
   const onSubmit = (data) => {
     const orderInfo = {
-      name: user?.name || data.name,
-      email: user?.email || data.email,
+      name: data.name || user?.name,
+      email: data.email || user?.email,
       address: data.address,
       date: data.date,
       status: "pending",

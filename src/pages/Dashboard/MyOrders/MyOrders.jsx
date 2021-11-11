@@ -29,7 +29,7 @@ const MyOrders = () => {
       title: "Do you want to cancel this order?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#3c4a49",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
     }).then((result) => {
@@ -61,6 +61,8 @@ const MyOrders = () => {
               <h4>Address : {address}</h4>
               <h4> Total Orders : {myOrders.length}</h4>
             </div>
+
+            <hr />
             <ul data-aos="fade-up">
               {myOrders.map((order) => (
                 <MyOrderList

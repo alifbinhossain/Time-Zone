@@ -7,6 +7,11 @@
   margin-right: 30px;
 }
 
+.user-orders hr {
+  border: none;
+  border-bottom: 1px solid #3c4a49;
+}
+
 .user-orders ul {
   list-style: none;
   margin: 0;

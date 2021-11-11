@@ -26,7 +26,8 @@ const SideNav = () => {
   }, [admin]);
 
   const activeStyle = {
-    backgroundColor: "#060b26",
+    backgroundColor: "#fff",
+    color: "#3c4a49",
   };
 
   /* -------------------------------------------------------------------------- */
@@ -37,7 +38,7 @@ const SideNav = () => {
       title: "Are you sure you want to log out?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#3c4a49",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
     }).then((result) => {
@@ -49,7 +50,7 @@ const SideNav = () => {
 
   return (
     <>
-      <IconContext.Provider value={{ color: "#fff" }}>
+      <IconContext.Provider value={{ color: "currentColor" }}>
         <div className="sidebar">
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />

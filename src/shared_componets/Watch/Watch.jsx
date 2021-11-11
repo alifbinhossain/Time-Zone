@@ -26,7 +26,7 @@ const Watch = ({ watch }) => {
           <span>€{(price - price * (discount / 100)).toFixed(2)}</span>
         </Card.Text>
         <Card.Text className="price"></Card.Text>
-        <Button onClick={handleBooking} variant="dark">
+        <Button onClick={handleBooking} variant="light">
           Buy Now
         </Button>
       </Card.Body>

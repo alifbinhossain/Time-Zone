@@ -27,7 +27,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="home">
       <Header></Header>
       <Banner></Banner>
       <section className="our-collections">

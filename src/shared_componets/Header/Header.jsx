@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 const Header = () => {
   const { user, logOut } = useAll();
   const activeStyle = {
-    color: "#cb9400",
+    color: "#3c4a49",
     fontWeight: "700",
   };
 
@@ -21,7 +21,7 @@ const Header = () => {
       title: "Are you sure you want to log out?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#3c4a49",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
     }).then((result) => {
