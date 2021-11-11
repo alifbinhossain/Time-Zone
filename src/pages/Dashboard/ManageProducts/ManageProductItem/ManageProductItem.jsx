@@ -5,7 +5,7 @@ import { Card } from "react-bootstrap";
 const ManageProductItem = ({ watch, handleWatchDelete }) => {
   const { img1, img2, name, _id } = watch;
   return (
-    <Card className="manage-item-card">
+    <Card className="manage-item-card" data-aos="zoom-in">
       <Card.Img variant="top" src={img1} />
       <Card.Img variant="top" src={img2} className="image-hover" />
       <Card.Body className="card-body d-flex flex-column justify-content-between">

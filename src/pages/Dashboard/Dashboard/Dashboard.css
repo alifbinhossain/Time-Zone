@@ -12,7 +12,8 @@
 .dash-review,
 .all-orders,
 .add-products,
-.manage-products {
+.manage-products,
+.admin {
   width: 100%;
   padding: 2rem 4rem;
   background-color: rgba(255, 255, 255, 0.65);
@@ -28,7 +29,8 @@
 .payment h1,
 .all-orders h1,
 .add-products h1,
-.manage-products h1 {
+.manage-products h1,
+.admin h1 {
   font-weight: 700;
   font-size: 60px;
   letter-spacing: 2px;

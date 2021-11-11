@@ -57,7 +57,7 @@ const SidebarDataAdmin = [
     cName: "nav-text",
   },
   {
-    title: "Make Admin",
+    title: "Create an Admin",
     path: "/make_admin",
     icon: <RiIcons.RiAdminFill />,
     cName: "nav-text",

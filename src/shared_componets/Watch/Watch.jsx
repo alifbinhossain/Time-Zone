@@ -12,7 +12,7 @@ const Watch = ({ watch }) => {
   };
 
   return (
-    <Card className="watch-card">
+    <Card className="watch-card" data-aos="zoom-in">
       <Card.Img variant="top" src={img1} />
       <Card.Img variant="top" src={img2} className="image-hover" />
       <Card.Text className="discount-text"> {discount}% off</Card.Text>

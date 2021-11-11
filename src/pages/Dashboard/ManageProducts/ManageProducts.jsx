@@ -54,14 +54,16 @@ const ManageProducts = () => {
   };
 
   return (
-    <section className="manage-products">
-      <h1 className="mb-4">Manage All Products</h1>
+    <section className="manage-products" data-aos="fade-in">
+      <h1 className="mb-4 text-center" data-aos="fade-up">
+        Manage All Products
+      </h1>
       {loading ? (
         <div className="spinner-box">
           <FadeLoader color="#777777" />
         </div>
       ) : (
-        <Row xs={1} sm={2} md={3} className="g-3 mb-5">
+        <Row xs={1} sm={2} md={3} className="g-4 mb-5">
           {watches.map((watch) => {
             return (
               <Col key={watch._id}>

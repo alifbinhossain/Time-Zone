@@ -1,0 +1,65 @@
+.admin {
+  display: flex;
+  padding-top: 8rem;
+}
+
+.admin > * {
+  padding: 0 3rem;
+}
+.admin hr {
+  display: none;
+  width: 50px;
+  border: none;
+  margin: 0.6rem auto 2rem;
+  height: 4px;
+  border-radius: 20px;
+  opacity: 1;
+}
+.admin h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------- ADMIN LIST ------------------------------- */
+.admin-list {
+  flex: 0 0 55%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 2rem;
+}
+
+.admin-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: rgba(60, 74, 73, 1);
+  color: #fff;
+  height: 50px;
+  padding: 0.8rem 1.4rem;
+  border-radius: 6px;
+}
+
+.admin-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.admin-item > * {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------- ADMIN FORM ------------------------------- */
+.admin-form {
+  flex: 1;
+}
+
+.btn-admin {
+  background-color: #3c4a49;
+  border: none !important;
+  color: #fff !important;
+  width: max-content !important;
+  border-radius: 4px !important;
+}

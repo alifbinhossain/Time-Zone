@@ -22,7 +22,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="form-signin" data-aos="fade-up">
+    <div className="form-signin" data-aos="fade-in">
       <h1 className="text-white text-center">Sign Up</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formGroupName">

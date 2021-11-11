@@ -22,6 +22,8 @@ const popupSuccess = (successType, falseLogout) => {
     title = "Successfully change this order status";
   } else if (successType === "new watch") {
     title = "Successfully added a new watch.. 😄";
+  } else if (successType === "create admin") {
+    title = "Successfully created a new admin 😄";
   }
   return Swal.fire({
     icon: "success",

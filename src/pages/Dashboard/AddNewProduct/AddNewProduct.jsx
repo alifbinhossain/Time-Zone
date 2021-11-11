@@ -37,8 +37,8 @@ const AddNewProduct = () => {
   };
 
   return (
-    <section className="add-products" data-aos="fade-up">
-      <h1>Add New Watch</h1>
+    <section className="add-products" data-aos="fade-in">
+      <h1 data-aos="fade-up">Add New Watch</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Row className="mb-3" xs={1} lg={3}>
           {/* -------------------------------------------------------------------------- */

@@ -121,11 +121,13 @@
   text-align: center;
 }
 
-.booking-form form {
+.booking-form form,
+.admin-form form {
   display: block;
   margin: 0 auto;
 }
-.booking-form input {
+.booking-form input,
+.admin-form input {
   display: block;
   border: 1px solid #e7e7e7e7;
   padding: 6px 12px;
@@ -135,17 +137,19 @@
   width: 100%;
   color: #3c4a49;
 }
-.booking-form input:focus {
+.booking-form input:focus,
+.admin-form input:focus {
   outline: 1px solid #e7e7e7e7;
 }
 
-.booking-form small {
+.booking-form small,
+.admin-form small {
   display: block;
   margin-top: -6px;
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 600;
-  color: #000;
+  color: #3c4a49;
 }
 .btn-book {
   background-color: #cb9400;

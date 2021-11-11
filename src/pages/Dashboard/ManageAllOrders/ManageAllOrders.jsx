@@ -4,14 +4,20 @@ import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import popupSuccess from "../../../popup/popupSuccess";
 import AllOrderItem from "./AllOrderItem/AllOrderItem";
+import { FadeLoader } from "react-spinners";
 
 const ManageAllOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/all_orders")
-      .then((data) => setAllOrders(data.data));
+    setLoading(true);
+    setTimeout(() => {
+      axios.get("http://localhost:5000/all_orders").then((data) => {
+        setAllOrders(data.data);
+        setLoading(false);
+      });
+    }, 1500);
   }, []); //get all orders from DB
 
   /* -------------------------------------------------------------------------- */
@@ -44,17 +50,25 @@ const ManageAllOrders = () => {
   };
 
   return (
-    <ul className="all-orders" data-aos="fade-up">
-      <h1 className="text-center">All Orders</h1>
+    <ul className="all-orders" data-aos="fade-in">
+      <h1 className="text-center" data-aos="fade-up">
+        All Orders
+      </h1>
       <h3 className="total-orders">Total Orders : {allOrders.length}</h3>
-      {allOrders.map((order, index) => (
-        <AllOrderItem
-          key={order._id}
-          order={order}
-          index={index}
-          handleOrderDelete={handleOrderDelete}
-        ></AllOrderItem>
-      ))}
+      {loading ? (
+        <div className="spinner-box">
+          <FadeLoader color="#777777" />
+        </div>
+      ) : (
+        allOrders.map((order, index) => (
+          <AllOrderItem
+            key={order._id}
+            order={order}
+            index={index}
+            handleOrderDelete={handleOrderDelete}
+          ></AllOrderItem>
+        ))
+      )}
     </ul>
   );
 };

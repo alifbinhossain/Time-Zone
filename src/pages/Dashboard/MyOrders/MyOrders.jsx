@@ -63,7 +63,7 @@ const MyOrders = () => {
             </div>
 
             <hr />
-            <ul data-aos="fade-up">
+            <ul data-aos="fade-in">
               {myOrders.map((order) => (
                 <MyOrderList
                   key={order._id}

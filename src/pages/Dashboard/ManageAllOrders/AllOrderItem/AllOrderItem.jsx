@@ -52,7 +52,7 @@ const AllOrderItem = ({ order, index, handleOrderDelete }) => {
   };
 
   return (
-    <li className="all-order-item" data-aos="fade-in" data-aos-offset="20">
+    <li className="all-order-item" data-aos="fade-right" data-aos-offset="20">
       <h5>
         {" "}
         {index + 1} . {name}
