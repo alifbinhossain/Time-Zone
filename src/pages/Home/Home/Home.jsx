@@ -23,7 +23,7 @@ const Home = () => {
         setWatches(data.data);
         setLoading(false);
       });
-    }, 1500);
+    }, 800);
   }, []);
 
   return (

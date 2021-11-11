@@ -31,9 +31,7 @@ const AddNewProduct = () => {
         popupSuccess("new watch");
         reset();
       }
-    }); //adding new tour on DB & received confirmation response
-
-    console.log(newWatch);
+    }); //adding new watch to DB & received confirmation response
   };
 
   return (

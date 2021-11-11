@@ -56,6 +56,9 @@
   flex: 1;
 }
 
+.admin-form small {
+  color: #3c4a49;
+}
 .btn-admin {
   background-color: #3c4a49;
   border: none !important;

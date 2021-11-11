@@ -17,7 +17,7 @@ const ManageAllOrders = () => {
         setAllOrders(data.data);
         setLoading(false);
       });
-    }, 1500);
+    }, 800);
   }, []); //get all orders from DB
 
   /* -------------------------------------------------------------------------- */

@@ -30,7 +30,8 @@
 .all-orders h1,
 .add-products h1,
 .manage-products h1,
-.admin h1 {
+.admin h1,
+.dash-review h1 {
   font-weight: 700;
   font-size: 60px;
   letter-spacing: 2px;

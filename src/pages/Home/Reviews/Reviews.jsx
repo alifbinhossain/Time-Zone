@@ -15,7 +15,7 @@ const Reviews = () => {
         setReviews(data.data);
         setLoading(false);
       });
-    }, 1500);
+    }, 800);
   }, []);
 
   const settings = {
