@@ -85,7 +85,7 @@ const SideNav = () => {
 
             <li className="nav-home">
               <Link className="" to="/home">
-                Back to the main page
+                Go back to the main page
               </Link>
             </li>
           </ul>

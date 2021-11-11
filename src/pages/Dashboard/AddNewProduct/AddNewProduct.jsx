@@ -197,6 +197,12 @@ const AddNewProduct = () => {
               <small>Description is required.</small>
             )}
           </FloatingLabel>
+          <small>
+            Follow the link to get a quick descriptions{" "}
+            <a target="_blank" href="https://www.bremont.com/">
+              www.bremont.com
+            </a>{" "}
+          </small>
         </Form.Group>
 
         <button className="btn-add" type="submit">

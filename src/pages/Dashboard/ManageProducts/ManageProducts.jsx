@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { FadeLoader } from "react-spinners";
 import Swal from "sweetalert2";
+import popupError from "../../../popup/popupError";
 import popupSuccess from "../../../popup/popupSuccess";
 import ManageProductItem from "./ManageProductItem/ManageProductItem";
 
@@ -21,7 +22,7 @@ const ManageProducts = () => {
   }, []);
 
   /* -------------------------------------------------------------------------- */
-  /*                         DELETE A ORDER FUNCTIONALITY                        */
+  /*                        DELETE A WATCH FUNCTIONALITY                        */
   /* -------------------------------------------------------------------------- */
   const handleWatchDelete = (id) => {
     Swal.fire({
@@ -32,18 +33,22 @@ const ManageProducts = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
     }).then((result) => {
-      if (result.isConfirmed) {
-        axios
-          .delete(`http://localhost:5000/manage_order/watch/${id}`)
-          .then((data) => {
-            const isDeleted = data.data.deletedCount;
+      if (watches.length > 6) {
+        if (result.isConfirmed) {
+          axios
+            .delete(`http://localhost:5000/manage_order/watch/${id}`)
+            .then((data) => {
+              const isDeleted = data.data.deletedCount;
 
-            if (isDeleted) {
-              popupSuccess("delete");
-              const remaining = watches.filter((order) => order._id !== id);
-              setWatches(remaining);
-            }
-          });
+              if (isDeleted) {
+                popupSuccess("delete");
+                const remaining = watches.filter((order) => order._id !== id);
+                setWatches(remaining);
+              }
+            });
+        }
+      } else {
+        popupError("Sorry! We have to keep at least 6 watches on home page..");
       }
     });
   };
@@ -56,7 +61,7 @@ const ManageProducts = () => {
           <FadeLoader color="#777777" />
         </div>
       ) : (
-        <Row xs={1} sm={2} md={3} className="g-3">
+        <Row xs={1} sm={2} md={3} className="g-3 mb-5">
           {watches.map((watch) => {
             return (
               <Col key={watch._id}>
