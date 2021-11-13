@@ -15,7 +15,6 @@
 .manage-products,
 .admin {
   width: 100%;
-  padding: 2rem 4rem;
   background-color: rgba(255, 255, 255, 0.65);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -38,10 +37,53 @@
 
 .dash-home h1,
 .payment h1 {
-  font-size: 80px;
+  font-size: 70px;
   text-transform: uppercase;
   text-align: left;
-  line-height: 1.2;
+  line-height: 1.3;
   letter-spacing: 1.5px;
   font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .dashboard-content {
+    padding: 1rem;
+  }
+
+  .my-orders,
+  .payment,
+  .dash-home,
+  .dash-review,
+  .all-orders,
+  .add-products,
+  .manage-products,
+  .admin {
+    padding: 2rem 1rem;
+  }
+  .my-orders h1,
+  .all-orders h1,
+  .add-products h1,
+  .manage-products h1,
+  .admin h1,
+  .dash-review h1 {
+    font-size: 42px;
+    letter-spacing: 1px;
+  }
+
+  .dash-home h1,
+  .payment h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  .dash-home,
+  .payment {
+    flex-direction: column;
+  }
 }

@@ -5,7 +5,7 @@ const Payment = () => {
   return (
     <section className="payment" data-aos="fade-in">
       <img data-aos="fade-right" src={banner} alt="" />
-      <h1 data-aos="fade-up" className="text-center">
+      <h1 data-aos="fade-up" className="ms-3">
         Payment System is coming soon...
       </h1>
     </section>

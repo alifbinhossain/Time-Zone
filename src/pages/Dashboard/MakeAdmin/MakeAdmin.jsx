@@ -56,7 +56,6 @@ const MakeAdmin = () => {
     <section className="admin" data-aos="fade-in">
       <ul className="admin-list">
         <h2 data-aos="fade-up">Our Admins </h2>
-        <hr />
         {loading ? (
           <div className="spinner-box">
             <FadeLoader color="#777777" />
@@ -75,7 +74,6 @@ const MakeAdmin = () => {
 
       <div className="admin-form">
         <h2 data-aos="fade-up">Create a New Admin</h2>
-        <hr />
         <form onSubmit={handleSubmit(onSubmit)} data-aos="zoom-in">
           <input placeholder="name" {...register("name", { required: true })} />
           {errors.name?.type === "required" && <small>Name is required</small>}

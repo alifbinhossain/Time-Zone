@@ -135,3 +135,19 @@
   margin: 1rem 0 1rem 2rem;
   object-fit: cover;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .nav-menu {
+    max-width: 100px;
+    padding: 0;
+  }
+
+  .nav-menu ul,
+  .nav-menu li {
+    margin: 0;
+    padding: 0;
+  }
+}

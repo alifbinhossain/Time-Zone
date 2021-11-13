@@ -6,15 +6,7 @@
 .admin > * {
   padding: 0 3rem;
 }
-.admin hr {
-  display: none;
-  width: 50px;
-  border: none;
-  margin: 0.6rem auto 2rem;
-  height: 4px;
-  border-radius: 20px;
-  opacity: 1;
-}
+
 .admin h2 {
   font-size: 42px;
   font-weight: 700;
@@ -65,4 +57,48 @@
   color: #fff !important;
   width: max-content !important;
   border-radius: 4px !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .admin {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+
+  .admin > * {
+    padding: 0;
+  }
+
+  .admin h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  /* ------------------------------- ADMIN LIST ------------------------------- */
+  .admin-list {
+    width: 100%;
+    margin: 0;
+  }
+
+  .admin-item {
+    height: 50px;
+    padding: 0.8rem 1.4rem;
+  }
+
+  .admin-item > * {
+    width: 100%;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ------------------------------- ADMIN FORM ------------------------------- */
+  .admin-form {
+    margin-top: 2rem;
+    width: 100%;
+  }
 }

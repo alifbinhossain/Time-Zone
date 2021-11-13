@@ -112,12 +112,19 @@
 /* -------------------------------------------------------------------------- */
 @media (max-width: 668px) {
   .form {
-    min-height: 80vh;
-    padding: 1rem;
+    min-height: 100vh;
+    padding: 0;
   }
 
   .form-signin {
     padding: 2rem 1rem;
     min-width: 100%;
+  }
+
+  .form-box {
+    background-position: center;
+    min-height: 100vh;
+    display: block;
+    padding: 3rem 1rem;
   }
 }

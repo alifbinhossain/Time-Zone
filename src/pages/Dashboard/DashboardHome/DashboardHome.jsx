@@ -8,7 +8,7 @@ const DashboardHome = () => {
   return (
     <section className="dash-home" data-aos="fade-in">
       <h1 data-aos="fade-up">
-        Welcome to our dashboard {user?.displayName.split(" ")[0]} !
+        Welcome to our dashboard <br /> {user?.displayName.split(" ")[0]} !
       </h1>
       <img data-aos="fade-left" src={img} alt="" />
     </section>

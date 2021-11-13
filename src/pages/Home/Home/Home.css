@@ -34,3 +34,30 @@
 
 .reviews .slider {
 }
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .our-collections,
+  .brands {
+    margin: 1.5rem 1rem 1rem;
+  }
+
+  .brands {
+    padding: 0 0 1rem 0;
+  }
+  .reviews {
+    margin: 0;
+  }
+
+  .our-collections p,
+  .brands p,
+  .reviews p {
+    font-size: 14px;
+  }
+
+  .sm-none {
+    display: none;
+  }
+}

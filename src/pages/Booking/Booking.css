@@ -81,7 +81,7 @@
   margin: 0;
 }
 /* -------------------------------------------------------------------------- */
-/*                               BOOKING BOTTTOM                              */
+/*                               BOOKING BOTTOM                              */
 /* -------------------------------------------------------------------------- */
 .booking-bottom {
   background-image: linear-gradient(
@@ -158,4 +158,87 @@
   border-radius: 4px !important;
   width: max-content !important;
   padding: 0.4rem 1.2rem !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .booking-banner {
+    min-height: 10vh;
+  }
+  .booking-banner h3 {
+    font-size: 12px;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                               BOOKING CONTENT                              */
+  /* -------------------------------------------------------------------------- */
+  .booking-content {
+    margin: 2rem 1rem 1rem;
+  }
+  .booking-product {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-image-box {
+    width: 100%;
+  }
+  .product-name {
+    margin-bottom: 0.6rem;
+  }
+
+  .product-details {
+    padding: 1rem 0.5rem;
+  }
+
+  .product-details .total-reviews {
+    font-size: 18px;
+  }
+
+  .product-details .description {
+    letter-spacing: 0;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                               BOOKING BOTTOM                              */
+  /* -------------------------------------------------------------------------- */
+  .booking-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  .discount {
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0 1.5rem;
+  }
+
+  /* ------------------------------ BOOKING FORM ------------------------------ */
+  .booking-form {
+    flex: 0 0 100%;
+    padding: 0;
+  }
+
+  .booking-form h3 {
+    display: none;
+  }
+
+  .booking-form form,
+  .admin-form form {
+    text-align: center;
+  }
+  .booking-form input,
+  .admin-form input {
+    display: inline-block;
+  }
+
+  .booking-form small,
+  .admin-form small {
+    text-align: left;
+  }
 }

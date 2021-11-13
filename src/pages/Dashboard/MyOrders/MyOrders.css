@@ -37,3 +37,39 @@
 .no-order img {
   width: 40%;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .user-info h4 {
+    text-align: center;
+  }
+  .user-info h4:not(:last-child) {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .user-orders ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* -------------------------------- NO ORDER -------------------------------- */
+  .no-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .no-order h1 {
+    font-size: 60px;
+    letter-spacing: 2px;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+
+  .no-order img {
+    width: 100%;
+  }
+}

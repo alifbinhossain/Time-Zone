@@ -53,7 +53,7 @@ const Home = () => {
           </Row>
         )}
       </section>
-      <img className="w-100 mt-5" src={img} alt="" />
+      <img className="w-100 mt-lg-5 sm-none" src={img} alt="" />
       <Brands></Brands>
       <Reviews></Reviews>
       <Features></Features>
