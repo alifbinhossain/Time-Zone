@@ -30,9 +30,7 @@
 .brands p,
 .reviews p {
   font-family: "Montserrat", sans-serif;
-}
-
-.reviews .slider {
+  text-transform: uppercase;
 }
 
 /* -------------------------------------------------------------------------- */

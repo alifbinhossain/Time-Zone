@@ -30,8 +30,9 @@ const Explore = () => {
       <section className="our-collections">
         <h1 className="text-center mb-3">Our Collections</h1>
         <p className="text-center mb-4">
-          LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING
-          INDUSTRY
+          Time Zone's love of aviation and deep understanding of its <br />
+          uncompromising demands are inherent throughout the Altitude
+          Collections.
         </p>
         {loading ? (
           <div className="spinner-box">

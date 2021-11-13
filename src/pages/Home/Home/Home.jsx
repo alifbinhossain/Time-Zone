@@ -35,8 +35,8 @@ const Home = () => {
       <section className="our-collections">
         <h1 className="text-center">Hot Deals</h1>
         <p className="text-center mb-4">
-          LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING
-          INDUSTRY
+          Discover history reborn in this unique collection inspired by OMEGA’s
+          chronograph watchmaking from the 1940s.
         </p>
 
         {loading ? (
