@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SideNav.css";
+import logo from "../../../images/logo/logo-mobile.png";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as FiIcons from "react-icons/fi";
@@ -65,7 +66,9 @@ const SideNav = () => {
                 <AiIcons.AiOutlineClose />
               </Link>
             </li>
-            <h2 className="ms-4">Dashboard</h2>
+            {/* <h2 className="ms-4">Dashboard</h2> */}
+            <img className="dash-logo" src={logo} alt="" />
+            <hr />
             {sidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
@@ -77,6 +80,7 @@ const SideNav = () => {
               );
             })}
 
+            <hr />
             <li>
               <button onClick={handleLogOut} className="btn-logout">
                 <FiIcons.FiLogOut /> Log Out

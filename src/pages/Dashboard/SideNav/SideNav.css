@@ -129,3 +129,9 @@
 .nav-home a {
   color: #fff;
 }
+
+.dash-logo {
+  width: 6rem;
+  margin: 1rem 0 1rem 2rem;
+  object-fit: cover;
+}
