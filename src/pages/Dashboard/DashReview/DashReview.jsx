@@ -21,13 +21,15 @@ const DashReview = () => {
       rating: Number(data.rating),
     }; //customer review information
 
-    axios.post("http://localhost:5000/reviews", review).then((data) => {
-      const isAdded = data.data.insertedId;
-      if (isAdded) {
-        popupSuccess("add review");
-        reset();
-      }
-    }); //adding user review's to DB & received confirmation response
+    axios
+      .post("https://young-journey-72414.herokuapp.com/reviews", review)
+      .then((data) => {
+        const isAdded = data.data.insertedId;
+        if (isAdded) {
+          popupSuccess("add review");
+          reset();
+        }
+      }); //adding user review's to DB & received confirmation response
 
     console.log(review);
   };

@@ -17,7 +17,9 @@ const MyOrders = () => {
     setLoading(true);
     setTimeout(() => {
       axios
-        .get(`http://localhost:5000/my_order/${user?.email}`)
+        .get(
+          `https://young-journey-72414.herokuapp.com/my_order/${user?.email}`
+        )
         .then((data) => {
           setMyOrders(data.data);
           setLoading(false);
@@ -42,7 +44,9 @@ const MyOrders = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/my_order_list/${id}`)
+          .delete(
+            `https://young-journey-72414.herokuapp.com/my_order_list/${id}`
+          )
           .then((data) => {
             const isDeleted = data.data.deletedCount;
 

@@ -27,7 +27,7 @@ const Signin = () => {
 
   const history = useHistory();
   const location = useLocation();
-  const redirectUrl = location.state?.from || "/home";
+  const redirectUrl = location.state?.from || "/dashboard";
 
   const onSubmit = (data) => {
     const userEmail = data.email;

@@ -14,10 +14,12 @@ const Explore = () => {
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
-      axios.get("http://localhost:5000/watches").then((data) => {
-        setWatches(data.data);
-        setLoading(false);
-      });
+      axios
+        .get("https://young-journey-72414.herokuapp.com/watches")
+        .then((data) => {
+          setWatches(data.data);
+          setLoading(false);
+        });
     }, 800);
   }, []);
 

@@ -13,10 +13,12 @@ const ManageAllOrders = () => {
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
-      axios.get("http://localhost:5000/all_orders").then((data) => {
-        setAllOrders(data.data);
-        setLoading(false);
-      });
+      axios
+        .get("https://young-journey-72414.herokuapp.com/all_orders")
+        .then((data) => {
+          setAllOrders(data.data);
+          setLoading(false);
+        });
     }, 800);
   }, []); //get all orders from DB
 
@@ -34,7 +36,9 @@ const ManageAllOrders = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/my_order_list/${id}`)
+          .delete(
+            `https://young-journey-72414.herokuapp.com/my_order_list/${id}`
+          )
           .then((data) => {
             console.log(data);
             const isDeleted = data.data.deletedCount;

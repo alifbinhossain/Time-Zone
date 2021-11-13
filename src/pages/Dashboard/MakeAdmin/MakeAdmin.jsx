@@ -13,10 +13,12 @@ const MakeAdmin = () => {
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
-      axios.get("http://localhost:5000/admins").then((data) => {
-        setAdmins(data.data);
-        setLoading(false);
-      });
+      axios
+        .get("https://young-journey-72414.herokuapp.com/admins")
+        .then((data) => {
+          setAdmins(data.data);
+          setLoading(false);
+        });
     }, 500);
   }, []); //get all admins
 
@@ -32,20 +34,22 @@ const MakeAdmin = () => {
       displayName: data.name,
       email: data.email,
     };
-    axios.put("http://localhost:5000/users/admin", adminInfo).then((data) => {
-      if (data.data.modifiedCount) {
-        popupSuccess("create admin");
-        let newAdmins = [...admins];
-        newAdmins.push(adminInfo);
-        setAdmins(newAdmins);
+    axios
+      .put("https://young-journey-72414.herokuapp.com/users/admin", adminInfo)
+      .then((data) => {
+        if (data.data.modifiedCount) {
+          popupSuccess("create admin");
+          let newAdmins = [...admins];
+          newAdmins.push(adminInfo);
+          setAdmins(newAdmins);
 
-        reset();
-      } else {
-        popupError(
-          "Sorry! We don't have any user with this email address..Please try again.."
-        );
-      }
-    });
+          reset();
+        } else {
+          popupError(
+            "Sorry! We don't have any user with this email address..Please try again.."
+          );
+        }
+      });
   }; //create an admin PUT request
 
   return (

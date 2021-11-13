@@ -14,10 +14,12 @@ const ManageProducts = () => {
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
-      axios.get("http://localhost:5000/watches").then((data) => {
-        setWatches(data.data);
-        setLoading(false);
-      });
+      axios
+        .get("https://young-journey-72414.herokuapp.com/watches")
+        .then((data) => {
+          setWatches(data.data);
+          setLoading(false);
+        });
     }, 800);
   }, []);
 
@@ -36,7 +38,9 @@ const ManageProducts = () => {
       if (watches.length > 6) {
         if (result.isConfirmed) {
           axios
-            .delete(`http://localhost:5000/manage_order/watch/${id}`)
+            .delete(
+              `https://young-journey-72414.herokuapp.com/manage_order/watch/${id}`
+            )
             .then((data) => {
               const isDeleted = data.data.deletedCount;
 

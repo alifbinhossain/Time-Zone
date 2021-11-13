@@ -11,10 +11,12 @@ const Reviews = () => {
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
-      axios.get("http://localhost:5000/reviews").then((data) => {
-        setReviews(data.data);
-        setLoading(false);
-      });
+      axios
+        .get("https://young-journey-72414.herokuapp.com/reviews")
+        .then((data) => {
+          setReviews(data.data);
+          setLoading(false);
+        });
     }, 800);
   }, []);
 

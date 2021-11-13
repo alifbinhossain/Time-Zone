@@ -25,13 +25,15 @@ const AddNewProduct = () => {
       reviews: Number(data.reviews) || 12,
     }; //new watch object information
 
-    axios.post("http://localhost:5000/watches", newWatch).then((data) => {
-      const isAdded = data.data.insertedId;
-      if (isAdded) {
-        popupSuccess("new watch");
-        reset();
-      }
-    }); //adding new watch to DB & received confirmation response
+    axios
+      .post("https://young-journey-72414.herokuapp.com/watches", newWatch)
+      .then((data) => {
+        const isAdded = data.data.insertedId;
+        if (isAdded) {
+          popupSuccess("new watch");
+          reset();
+        }
+      }); //adding new watch to DB & received confirmation response
   };
 
   return (
