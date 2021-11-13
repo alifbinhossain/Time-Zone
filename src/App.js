@@ -14,6 +14,7 @@ import AllProvider from "./context/AllProvider";
 import Booking from "./pages/Booking/Booking";
 import PrivateRoute from "./shared_componets/PrivateRoute/PrivateRoute";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
+import NotFound from "./pages/404/NotFound";
 
 function App() {
   useEffect(() => {
@@ -63,6 +64,13 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>
+
+            {/* -------------------------------------------------------------------------- */
+            /*                                  404 PAGE                                  */
+            /* -------------------------------------------------------------------------- */}
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
         </Router>
       </div>

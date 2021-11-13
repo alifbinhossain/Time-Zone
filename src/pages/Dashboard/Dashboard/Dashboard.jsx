@@ -16,7 +16,7 @@ import SideNav from "../SideNav/SideNav";
 const Dashboard = () => {
   let { path } = useRouteMatch();
   return (
-    <div>
+    <section className="dashboard" data-aos="fade-in">
       <SideNav></SideNav>
       <section className="dashboard-content">
         <Switch>
@@ -63,7 +63,7 @@ const Dashboard = () => {
           </AdminRoute>
         </Switch>
       </section>
-    </div>
+    </section>
   );
 };
 

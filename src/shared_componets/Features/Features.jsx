@@ -7,7 +7,7 @@ import img4 from "../../images/logo/icon-4.png";
 
 const Features = () => {
   return (
-    <ul className="features">
+    <ul className="features" data-aos="fade-in">
       <li className="features-list">
         <img src={img1} alt="" />
         <h5>Free Shipping On All Orders</h5>

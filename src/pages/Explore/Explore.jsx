@@ -1,4 +1,5 @@
 import axios from "axios";
+import "./Explore.css";
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Features from "../../shared_componets/Features/Features";
@@ -24,9 +25,8 @@ const Explore = () => {
   }, []);
 
   return (
-    <div>
+    <section className="explore" data-aos="fade-in">
       <Header></Header>
-
       <section className="our-collections">
         <h1 className="text-center mb-3">Our Collections</h1>
         <p className="text-center mb-4">
@@ -49,7 +49,7 @@ const Explore = () => {
       </section>
       <Features></Features>
       <Footer></Footer>
-    </div>
+    </section>
   );
 };
 

@@ -36,7 +36,7 @@ const DashReview = () => {
 
   return (
     <section className="dash-review" data-aos="fade-in">
-      <h1 data-aos="fade-up">Add New Review</h1>
+      <h1 data-aos="fade-up">Add a New Review</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Row className="mb-3" xs={1} lg={3}>
           {/* -------------------------------------------------------------------------- */

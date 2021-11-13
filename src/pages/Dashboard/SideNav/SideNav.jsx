@@ -57,7 +57,8 @@ const SideNav = () => {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
 
-          <h2>Welcome to the dashboard {user?.displayName.split(" ")[0]} !</h2>
+          {/* 
+          <h2>Welcome to the dashboard {user?.displayName.split(" ")[0]} !</h2> */}
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>

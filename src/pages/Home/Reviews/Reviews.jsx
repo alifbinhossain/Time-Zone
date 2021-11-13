@@ -60,7 +60,7 @@ const Reviews = () => {
   };
 
   return (
-    <section className="reviews">
+    <section className="reviews" data-aos="fade-left" data-aos-offset="200">
       <p className="text-center m-0"> Testimonial</p>
       <h1 className="text-center mb-4">Our Happy Customers</h1>
 

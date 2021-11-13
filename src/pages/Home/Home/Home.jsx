@@ -10,7 +10,7 @@ import { Col, Row } from "react-bootstrap";
 import Watch from "../../../shared_componets/Watch/Watch";
 import axios from "axios";
 import Reviews from "../Reviews/Reviews";
-import { MoonLoader, FadeLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 
 const Home = () => {
   const [watches, setWatches] = useState([]);
@@ -29,7 +29,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home">
+    <div className="home" data-aos="fade-in">
       <Header></Header>
       <Banner></Banner>
       <section className="our-collections">

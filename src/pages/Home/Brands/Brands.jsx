@@ -28,7 +28,7 @@ const Brands = () => {
   ];
 
   return (
-    <section className="brands">
+    <section className="brands" data-aos="fade-up">
       <h1 className="text-center">Shop By Brands</h1>
       <p className="text-center">
         LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING

@@ -1,0 +1,38 @@
+.error-page {
+  min-height: 100vh;
+  background-color: #3c4a49;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  line-height: 2;
+}
+.error-page img {
+  width: 35%;
+}
+
+.error-page h2 {
+  font-family: "Kristi", cursive;
+  font-weight: 500;
+  font-size: 80px;
+  color: #fc5b62;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .error-page {
+    padding: 3%;
+  }
+  .error-page img {
+    width: 100%;
+  }
+  .error-page h2 {
+    font-size: 50px;
+    color: #fc5b62;
+  }
+}
