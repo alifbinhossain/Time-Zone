@@ -53,7 +53,7 @@ const ManageProducts = () => {
         }
       } else {
         popupError(
-          "Sorry! We have to keep at least 8 watches in our treasure..Sorry Hacker..🙄"
+          "Sorry Hacker! We have to keep at least 8 watches in our treasure.. 😣"
         );
       }
     });
