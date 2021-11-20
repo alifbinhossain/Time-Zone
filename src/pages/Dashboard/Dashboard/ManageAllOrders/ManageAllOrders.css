@@ -1,0 +1,28 @@
+.total-orders {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-weight: 700;
+  background-color: #3c4a49;
+  padding: 0.6rem 2rem;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+}
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .total-orders {
+    display: none;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-weight: 700;
+    background-color: #3c4a49;
+    padding: 0.6rem 2rem;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+  }
+}

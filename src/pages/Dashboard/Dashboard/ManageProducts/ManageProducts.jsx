@@ -35,7 +35,7 @@ const ManageProducts = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
     }).then((result) => {
-      if (watches.length > 8) {
+      if (watches.length > 6) {
         if (result.isConfirmed) {
           axios
             .delete(
@@ -52,9 +52,7 @@ const ManageProducts = () => {
             });
         }
       } else {
-        popupError(
-          "Sorry! We have to keep at least 8 watches in our treasure..Sorry Hacker..🙄"
-        );
+        popupError("Sorry! We have to keep at least 6 watches on home page..");
       }
     });
   };

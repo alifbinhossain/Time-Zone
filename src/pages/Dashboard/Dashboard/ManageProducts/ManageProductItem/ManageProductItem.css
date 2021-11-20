@@ -1,0 +1,54 @@
+.manage-item-card {
+  position: relative;
+  border: none !important;
+}
+
+.manage-item-card img {
+  width: 100%;
+}
+.manage-item-card .image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.manage-item-card:hover .image-hover {
+  opacity: 1;
+}
+
+.manage-item-card .card-body {
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(60, 74, 73, 0.85),
+    rgba(60, 74, 73, 0.5)
+  );
+  /* background-color: rgba(60, 74, 73, 0.65); */
+  width: 100%;
+  color: #fff;
+  min-height: 160px;
+}
+.manage-item-card .card-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  width: 90%;
+  line-height: 1.6;
+}
+
+.manage-item-card .btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.manage-item-card .btn-box button {
+  background-color: #fff;
+  color: #3c4a49;
+  border: none;
+  height: 50px;
+  width: 50px;
+  font-size: 18px;
+  border-radius: 50%;
+}

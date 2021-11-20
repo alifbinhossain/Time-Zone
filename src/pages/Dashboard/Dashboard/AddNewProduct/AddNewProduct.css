@@ -1,0 +1,40 @@
+.add-products form {
+  margin-top: 2rem;
+  min-height: 80%;
+  text-align: left;
+}
+.add-products form label {
+  color: #3c4a49 !important;
+}
+
+.add-products form input,
+.add-products form select,
+.add-products form textarea {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.65);
+  color: #3c4a49;
+}
+
+.add-products form small {
+  font-weight: 600;
+  color: #3c4a49;
+}
+
+.btn-add {
+  background-color: #3c4a49;
+  border: none;
+  padding: 0.4rem 1.2rem;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 20px;
+}
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .add-products form {
+    margin-top: 1rem;
+  }
+}

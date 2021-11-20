@@ -55,19 +55,14 @@ const MakeAdmin = () => {
   return (
     <section className="admin" data-aos="fade-in">
       <ul className="admin-list">
-        <h2 data-aos="fade-up">Our Admins : {admins.length} </h2>
+        <h2 data-aos="fade-up">Our Admins </h2>
         {loading ? (
           <div className="spinner-box">
             <FadeLoader color="#777777" />
           </div>
         ) : (
           admins.map((admin, index) => (
-            <li
-              key={index}
-              className="admin-item"
-              data-aos="fade-right"
-              data-aos-offset="30"
-            >
+            <li key={index} className="admin-item" data-aos="fade-right">
               <h4 className="name">
                 {index + 1}. Name : {admin?.displayName}
               </h4>

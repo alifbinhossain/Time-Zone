@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Watch.css";
 import { Button, Card } from "react-bootstrap";
 import { useHistory } from "react-router";

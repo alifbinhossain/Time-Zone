@@ -1,0 +1,75 @@
+.user-info h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.user-info h4:not(:last-child) {
+  margin-right: 30px;
+}
+
+.user-orders hr {
+  border: none;
+  border-bottom: 1px solid #3c4a49;
+}
+
+.user-orders ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* -------------------------------- NO ORDER -------------------------------- */
+.no-order {
+  display: flex;
+  align-items: center;
+}
+
+.no-order h1 {
+  font-weight: 500;
+  font-size: 110px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  flex: 0 0 60%;
+}
+
+.no-order img {
+  width: 40%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .user-info h4 {
+    text-align: center;
+  }
+  .user-info h4:not(:last-child) {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .user-orders ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* -------------------------------- NO ORDER -------------------------------- */
+  .no-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .no-order h1 {
+    font-size: 60px;
+    letter-spacing: 2px;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+
+  .no-order img {
+    width: 100%;
+  }
+}

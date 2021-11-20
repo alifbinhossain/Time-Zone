@@ -1,0 +1,21 @@
+.payment {
+  display: flex;
+  align-items: center;
+}
+
+.payment > * {
+  padding: 1rem;
+}
+
+.payment img {
+  width: 50%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .payment img {
+    width: 100%;
+  }
+}

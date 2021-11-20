@@ -1,0 +1,19 @@
+.dash-home {
+  display: flex;
+  align-items: center;
+}
+.dash-home > * {
+  padding: 1rem;
+}
+.dash-home img {
+  width: 55%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .dash-home img {
+    width: 100%;
+  }
+}

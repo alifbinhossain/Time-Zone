@@ -1,0 +1,102 @@
+.my_orders-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 3rem;
+  /* border-radius: 3px; */
+  /* background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05); */
+}
+
+.my_orders-list:not(:last-child) {
+  border-bottom: 1px solid #777777;
+  margin-bottom: 1rem;
+}
+.my_orders-list > * {
+  width: 20%;
+  text-align: center;
+}
+
+.my_orders-list h5,
+.my_orders-list h6 {
+  font-weight: 600;
+}
+
+.my_orders-list .image-box,
+.all-order-item .image-box {
+  position: relative;
+  width: max-content;
+}
+.my_orders-list img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pending,
+.confirm {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.pending {
+  background-color: #f29339;
+}
+.confirm {
+  background-color: #00ab66;
+}
+
+.btn-delete {
+  width: max-content;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: #3c4a49;
+  transition: all 0.1s;
+}
+.btn-delete:active {
+  transform: scale(0.92);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SHORT MEDIA QUERY                             */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 668px) {
+  .my_orders-list {
+    padding: 1rem 0.5rem;
+  }
+  .my_orders-list > * {
+    width: 20%;
+    text-align: center;
+    margin-right: 10px;
+  }
+
+  .my_orders-list h5,
+  .my_orders-list h6 {
+    font-size: 12px;
+    width: 50%;
+    font-weight: 600;
+  }
+
+  .my_orders-list img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pending,
+  .confirm {
+    width: 10px;
+    height: 10px;
+  }
+  .btn-delete {
+    font-size: 15px;
+  }
+}
